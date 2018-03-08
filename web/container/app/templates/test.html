@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid" style="margin-top: 60px">
+	<div class="container-fluid">
+		{% include 'messages.html' %}
+		<div class="panel panel-default">
+			<div class="panel-heading">LogView</div>
+			<div id='log-panel' class="panel-body">Log stuff goes here!</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    var div = document.getElementById('log-panel');
+    socket.on('connect', function() {
+    	div.innerHTML = '';
+        socket.send('I\'m connected!');
+    });
+    
+    socket.on('message', function (msg) {
+    	console.log('message logged.');
+    	var txt = document.createTextNode(msg);
+    	div.appendChild(txt);
+    });
+</script>
+
+{% endblock %}
