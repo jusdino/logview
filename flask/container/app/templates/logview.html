@@ -16,13 +16,13 @@
     var div = document.getElementById('log-panel');
     socket.on('connect', function() {
     	div.innerHTML = '';
-        socket.send('I\'m connected!');
     });
     
     socket.on('message', function (msg) {
-    	console.log('message logged.');
+    	var p = document.createElement("p");
     	var txt = document.createTextNode(msg);
-    	div.appendChild(txt);
+    	p.appendChild(txt);
+    	div.appendChild(p);
     });
 </script>
 

@@ -5,13 +5,6 @@ from sqlalchemy.sql.schema import Column
 from sqlalchemy.sql.sqltypes import DateTime, Text, String, Integer
 
 
-class ModelExample(db.Model):
-    id = Column(Integer, primary_key=True)
-    title = Column(String(250))
-    content = Column(Text)
-    date = Column(DateTime)
-
-
 class User(db.Model):
     id = Column(Integer, primary_key=True)
     user = Column(String(64), unique=True)

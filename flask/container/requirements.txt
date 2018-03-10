@@ -1,0 +1,11 @@
+flask
+redis
+flask_sqlalchemy
+Flask-WTF
+flask-socketio
+flask_login
+flask_bcrypt
+flask_wtf
+flask_script
+flask_migrate
+mysqlclient

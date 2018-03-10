@@ -27,7 +27,7 @@ def test():
 @socketio.on('connect')
 def socket_connect():
     print('Connected!', file=sys.stderr)
-    emit('message', '...')
+    emit('message', '<Monitoring log file>\n')
 
 @socketio.on('message')
 def socket_message(message):
