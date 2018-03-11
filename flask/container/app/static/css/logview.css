@@ -1,0 +1,39 @@
+html, body {
+	height: 100%;
+}
+
+body > div.container-fluid {
+	padding-top: 60px;
+}
+
+div.container-log {
+	margin: 0;
+	border: 0;
+	height: calc(100% - 15px);
+}
+
+div.panel-log {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+div.panel-body-log {
+	height: calc(100% - 40px);
+	padding: 15px;
+}
+
+div#log {
+	background: #404040;
+	color: LightGrey;
+	height: calc(100% - 30px);
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+div#log p {
+	margin: 0;
+}
