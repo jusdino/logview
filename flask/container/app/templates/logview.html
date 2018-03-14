@@ -13,7 +13,7 @@
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
 <script type="text/javascript" charset="utf-8">
-    var socket = io.connect('http://' + document.domain + ':' + location.port);
+    var socket = io.connect(window.location.protocol + "//" + document.domain + ':' + location.port);
     var div = document.getElementById('log');
     socket.on('connect', function() {
     	div.innerHTML = '';

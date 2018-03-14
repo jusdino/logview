@@ -44,7 +44,7 @@ def login():
                 if user.is_authenticated:
                     flash('Welcome back, {uname}!'.format(
                         uname=user.name))
-                    return form.redirect('converter')
+                    return redirect(url_for('log_view'))
                 flash('Please change your password!')
                 return redirect(url_for('change_password'))
         flash('Invalid login')
